@@ -6,13 +6,13 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgres"
   url      = env("DATABASE_URL")
 }
 
 model product {
-  id Int @id @default(autoincrement())
-  name String
-  price Int
+  id        Int      @id @default(autoincrement())
+  name      String
+  price     Int
   createdAt DateTime @default(now())
 }
